@@ -1,4 +1,4 @@
-**<Glass morphism calculator>**
+<h1>Glass morphism calculator</h1>
 
 Using: 
 ![icons8-javascript-48](https://user-images.githubusercontent.com/25865551/157659755-663ab489-51ca-466b-be03-68d442d41d43.png)  JavaScript
