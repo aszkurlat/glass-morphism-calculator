@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-color-purple: #5335cf;
+  --body-color-red: #de005e;
+  --body-color-orange: #ec7656;
+  --border-color: rgba(255, 255, 255, 0.5);
+  --shadow-color: rgba(0, 0, 0, 0.15);
+  --bgc-color: rgba(255, 255, 255, 0.1);
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  text-align: center;
+  background-image: linear-gradient(
+    240deg,
+    var(--body-color-purple) 0%,
+    var(--body-color-red) 25%,
+    var(--body-color-orange) 50%,
+    var(--body-color-red) 75%,
+    var(--body-color-purple) 100%
+  );
+
+  background-size: 400%;
+  animation: move 20s linear infinite;
+}
+.panel {
+  display: flex;
+  flex-direction: row;
+  height: 415px;
+  width: 300px;
+  background: var(--bgc-color);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 20px 50px var(--shadow-color);
+  border-top: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
+  align-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 1.2rem;
+  align-items: stretch;
+  justify-content: center;
+}
+button {
+  display: flex;
+  height: 50px;
+  width: calc(100% / 4 - 10px);
+  border-radius: 12px;
+  margin-top: 1px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  background: var(--bgc-color);
+}
+
+@keyframes move {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
